@@ -1,0 +1,1 @@
+ALTER TABLE `roles` MODIFY COLUMN `permissions` text NOT NULL;

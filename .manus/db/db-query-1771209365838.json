@@ -1,0 +1,18 @@
+{
+  "query": "SHOW COLUMNS FROM products LIKE 'externalLinks';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2UgF3RoM9t4dTrz.eec3770ca5e3 --database RG4aFVMA833oA5k2Sr9ESK --execute SHOW COLUMNS FROM products LIKE 'externalLinks';",
+  "rows": [
+    {
+      "Field": "externalLinks",
+      "Type": "text",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    }
+  ],
+  "messages": [],
+  "stdout": "Field\tType\tNull\tKey\tDefault\tExtra\nexternalLinks\ttext\tYES\t\tNULL\t\n",
+  "stderr": "",
+  "execution_time_ms": 100
+}

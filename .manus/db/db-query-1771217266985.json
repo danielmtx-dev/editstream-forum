@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO customUsers (username, email, phone, passwordHash, displayName, role, isGroupMember, isActive, banStatus, telegramVerified, failedLoginAttempts) VALUES ('test_insert_check', DEFAULT, DEFAULT, 'test_hash', 'Test User', 'user', false, true, 'active', false, 0);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2UgF3RoM9t4dTrz.eec3770ca5e3 --database RG4aFVMA833oA5k2Sr9ESK --execute INSERT INTO customUsers (username, email, phone, passwordHash, displayName, role, isGroupMember, isActive, banStatus, telegramVerified, failedLoginAttempts) VALUES ('test_insert_check', DEFAULT, DEFAULT, 'test_hash', 'Test User', 'user', false, true, 'active', false, 0);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 67
+}

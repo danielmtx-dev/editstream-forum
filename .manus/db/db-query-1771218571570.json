@@ -1,0 +1,26 @@
+{
+  "query": "SELECT id, title, isFree, fileKey, fileName, externalLinks FROM products;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2UgF3RoM9t4dTrz.eec3770ca5e3 --database RG4aFVMA833oA5k2Sr9ESK --execute SELECT id, title, isFree, fileKey, fileName, externalLinks FROM products;",
+  "rows": [
+    {
+      "id": "1",
+      "title": "Testes",
+      "isFree": "0",
+      "fileKey": "products/files/ePeHOWh47NDP-promo_bot_v2.zip",
+      "fileName": "promo_bot_v2.zip",
+      "externalLinks": "[]"
+    },
+    {
+      "id": "30001",
+      "title": "Ibo player 26 temas",
+      "isFree": "1",
+      "fileKey": "NULL",
+      "fileName": "NULL",
+      "externalLinks": "[{\"label\":\"ibo\",\"url\":\"https://www.mediafire.com/file/83tmn7wb8sfq33e/IBO_v3.9_-_Ibo_different_version_26_themes_with_panel.zip/file\"}]"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tisFree\tfileKey\tfileName\texternalLinks\n1\tTestes\t0\tproducts/files/ePeHOWh47NDP-promo_bot_v2.zip\tpromo_bot_v2.zip\t[]\n30001\tIbo player 26 temas\t1\tNULL\tNULL\t[{\"label\":\"ibo\",\"url\":\"https://www.mediafire.com/file/83tmn7wb8sfq33e/IBO_v3.9_-_Ibo_different_version_26_themes_with_panel.zip/file\"}]\n",
+  "stderr": "",
+  "execution_time_ms": 54
+}

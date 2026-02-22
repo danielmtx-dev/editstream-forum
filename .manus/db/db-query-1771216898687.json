@@ -1,0 +1,43 @@
+{
+  "query": "SHOW CREATE TABLE customUsers;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2UgF3RoM9t4dTrz.eec3770ca5e3 --database RG4aFVMA833oA5k2Sr9ESK --execute SHOW CREATE TABLE customUsers;",
+  "rows": [
+    {
+      "Table": "customUsers",
+      "Create Table": "CREATE TABLE `customUsers` ("
+    }
+  ],
+  "messages": [
+    "  `id` int(11) NOT NULL AUTO_INCREMENT,",
+    "  `username` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,",
+    "  `email` varchar(320) COLLATE utf8mb4_unicode_ci DEFAULT NULL,",
+    "  `phone` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL,",
+    "  `passwordHash` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL,",
+    "  `displayName` varchar(256) COLLATE utf8mb4_unicode_ci DEFAULT NULL,",
+    "  `role` enum('user','admin') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'user',",
+    "  `isGroupMember` tinyint(1) NOT NULL DEFAULT '0',",
+    "  `isActive` tinyint(1) NOT NULL DEFAULT '1',",
+    "  `failedLoginAttempts` int(11) NOT NULL DEFAULT '0',",
+    "  `lockedUntil` timestamp NULL DEFAULT NULL,",
+    "  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,",
+    "  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,",
+    "  `lastSignedIn` timestamp NULL DEFAULT NULL,",
+    "  `banStatus` enum('active','restricted','temp_banned','banned') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active',",
+    "  `banReason` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,",
+    "  `banExpiresAt` timestamp NULL DEFAULT NULL,",
+    "  `telegramId` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,",
+    "  `telegramUsername` varchar(128) COLLATE utf8mb4_unicode_ci DEFAULT NULL,",
+    "  `telegramFirstName` varchar(256) COLLATE utf8mb4_unicode_ci DEFAULT NULL,",
+    "  `telegramPhotoUrl` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,",
+    "  `telegramVerified` tinyint(1) NOT NULL DEFAULT '0',",
+    "  PRIMARY KEY (`id`) /*T![clustered_index] CLUSTERED */,",
+    "  UNIQUE KEY `customUsers_username_unique` (`username`),",
+    "  UNIQUE KEY `customUsers_email_unique` (`email`),",
+    "  UNIQUE KEY `customUsers_phone_unique` (`phone`),",
+    "  UNIQUE KEY `customUsers_telegramId_unique` (`telegramId`)",
+    ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=90001"
+  ],
+  "stdout": "Table\tCreate Table\ncustomUsers\tCREATE TABLE `customUsers` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `username` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `email` varchar(320) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `phone` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `passwordHash` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `displayName` varchar(256) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `role` enum('user','admin') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'user',\n  `isGroupMember` tinyint(1) NOT NULL DEFAULT '0',\n  `isActive` tinyint(1) NOT NULL DEFAULT '1',\n  `failedLoginAttempts` int(11) NOT NULL DEFAULT '0',\n  `lockedUntil` timestamp NULL DEFAULT NULL,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n  `lastSignedIn` timestamp NULL DEFAULT NULL,\n  `banStatus` enum('active','restricted','temp_banned','banned') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active',\n  `banReason` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `banExpiresAt` timestamp NULL DEFAULT NULL,\n  `telegramId` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `telegramUsername` varchar(128) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `telegramFirstName` varchar(256) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `telegramPhotoUrl` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `telegramVerified` tinyint(1) NOT NULL DEFAULT '0',\n  PRIMARY KEY (`id`) /*T![clustered_index] CLUSTERED */,\n  UNIQUE KEY `customUsers_username_unique` (`username`),\n  UNIQUE KEY `customUsers_email_unique` (`email`),\n  UNIQUE KEY `customUsers_phone_unique` (`phone`),\n  UNIQUE KEY `customUsers_telegramId_unique` (`telegramId`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=90001\n",
+  "stderr": "",
+  "execution_time_ms": 54
+}

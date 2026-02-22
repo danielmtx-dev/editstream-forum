@@ -1,0 +1,62 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1771196506690,
+      "tag": "0000_crazy_rick_jones",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1771196617208,
+      "tag": "0001_bouncy_shocker",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1771196999084,
+      "tag": "0002_quiet_brother_voodoo",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1771203594534,
+      "tag": "0003_redundant_the_spike",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1771209339745,
+      "tag": "0004_cynical_celestials",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1771698320297,
+      "tag": "0005_classy_guardsmen",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1771698355840,
+      "tag": "0006_charming_deathstrike",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "5",
+      "when": 1771699336861,
+      "tag": "0007_perfect_ezekiel",
+      "breakpoints": true
+    }
+  ]
+}

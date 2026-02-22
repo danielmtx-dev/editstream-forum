@@ -1,0 +1,1 @@
+ALTER TABLE `customUsers` ADD `profilePhotoUrl` text;

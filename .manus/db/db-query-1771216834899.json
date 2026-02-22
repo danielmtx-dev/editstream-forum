@@ -1,0 +1,24 @@
+{
+  "query": "SELECT COLUMN_NAME, DATA_TYPE, IS_NULLABLE, COLUMN_DEFAULT, COLUMN_KEY FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'customUsers' AND COLUMN_NAME IN ('email', 'phone');",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2UgF3RoM9t4dTrz.eec3770ca5e3 --database RG4aFVMA833oA5k2Sr9ESK --execute SELECT COLUMN_NAME, DATA_TYPE, IS_NULLABLE, COLUMN_DEFAULT, COLUMN_KEY FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'customUsers' AND COLUMN_NAME IN ('email', 'phone');",
+  "rows": [
+    {
+      "COLUMN_NAME": "email",
+      "DATA_TYPE": "varchar",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "COLUMN_KEY": "UNI"
+    },
+    {
+      "COLUMN_NAME": "phone",
+      "DATA_TYPE": "varchar",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "NULL",
+      "COLUMN_KEY": "UNI"
+    }
+  ],
+  "messages": [],
+  "stdout": "COLUMN_NAME\tDATA_TYPE\tIS_NULLABLE\tCOLUMN_DEFAULT\tCOLUMN_KEY\nemail\tvarchar\tYES\tNULL\tUNI\nphone\tvarchar\tYES\tNULL\tUNI\n",
+  "stderr": "",
+  "execution_time_ms": 53
+}

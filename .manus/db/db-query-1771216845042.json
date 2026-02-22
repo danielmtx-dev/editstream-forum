@@ -1,0 +1,58 @@
+{
+  "query": "SELECT id, username, email, phone FROM customUsers ORDER BY id LIMIT 20;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2UgF3RoM9t4dTrz.eec3770ca5e3 --database RG4aFVMA833oA5k2Sr9ESK --execute SELECT id, username, email, phone FROM customUsers ORDER BY id LIMIT 20;",
+  "rows": [
+    {
+      "id": "1",
+      "username": "Danielssh",
+      "email": "Intzhs10@gmail.com",
+      "phone": "(33) 99960-3702"
+    },
+    {
+      "id": "2",
+      "username": "warriorplaytv@gmail.com",
+      "email": "warriorplaytv@gmail.com",
+      "phone": "4565634645"
+    },
+    {
+      "id": "3",
+      "username": "Level",
+      "email": "levelmobwtk@gmail.com",
+      "phone": "339999603808"
+    },
+    {
+      "id": "4",
+      "username": "Super",
+      "email": "super@gmail.com",
+      "phone": "27999813185"
+    },
+    {
+      "id": "5",
+      "username": "brito",
+      "email": "flixmax.conet@gmail.com",
+      "phone": "79999966618"
+    },
+    {
+      "id": "6",
+      "username": "FBottassi",
+      "email": "suporte@grupospirit.com.br",
+      "phone": "27988715499"
+    },
+    {
+      "id": "7",
+      "username": "ZECA",
+      "email": "androidlabrj@proton.me",
+      "phone": "33999604646"
+    },
+    {
+      "id": "30001",
+      "username": "EditStream",
+      "email": "NULL",
+      "phone": "NULL"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tusername\temail\tphone\n1\tDanielssh\tIntzhs10@gmail.com\t(33) 99960-3702\n2\twarriorplaytv@gmail.com\twarriorplaytv@gmail.com\t4565634645\n3\tLevel\tlevelmobwtk@gmail.com\t339999603808\n4\tSuper\tsuper@gmail.com\t27999813185\n5\tbrito\tflixmax.conet@gmail.com\t79999966618\n6\tFBottassi\tsuporte@grupospirit.com.br\t27988715499\n7\tZECA\tandroidlabrj@proton.me\t33999604646\n30001\tEditStream\tNULL\tNULL\n",
+  "stderr": "",
+  "execution_time_ms": 51
+}

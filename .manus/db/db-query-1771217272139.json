@@ -1,0 +1,17 @@
+{
+  "query": "DELETE FROM customUsers WHERE username = 'test_insert_check'; SELECT id, username, email, phone, displayName FROM customUsers WHERE username = 'Danielssh';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2UgF3RoM9t4dTrz.eec3770ca5e3 --database RG4aFVMA833oA5k2Sr9ESK --execute DELETE FROM customUsers WHERE username = 'test_insert_check'; SELECT id, username, email, phone, displayName FROM customUsers WHERE username = 'Danielssh';",
+  "rows": [
+    {
+      "id": "1",
+      "username": "Danielssh",
+      "email": "Intzhs10@gmail.com",
+      "phone": "(33) 99960-3702",
+      "displayName": "Daniel"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tusername\temail\tphone\tdisplayName\n1\tDanielssh\tIntzhs10@gmail.com\t(33) 99960-3702\tDaniel\n",
+  "stderr": "",
+  "execution_time_ms": 67
+}

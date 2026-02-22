@@ -1,0 +1,13 @@
+{
+  "query": "SELECT column_name FROM information_schema.columns WHERE table_name = 'products' AND column_name = 'externalLinks';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2UgF3RoM9t4dTrz.eec3770ca5e3 --database RG4aFVMA833oA5k2Sr9ESK --execute SELECT column_name FROM information_schema.columns WHERE table_name = 'products' AND column_name = 'externalLinks';",
+  "rows": [
+    {
+      "column_name": "externalLinks"
+    }
+  ],
+  "messages": [],
+  "stdout": "column_name\nexternalLinks\n",
+  "stderr": "",
+  "execution_time_ms": 59
+}
