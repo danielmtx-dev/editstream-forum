@@ -3,17 +3,8 @@
   "buildCommand": "pnpm build",
   "devCommand": "pnpm dev",
   "framework": "vite",
-  "functions": {
-    "api/**/*.ts": {
-      "memory": 1024,
-      "maxDuration": 30
-    }
-  },
+  "outputDirectory": "dist/public",
   "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/$1"
-    },
     {
       "source": "/(.*)",
       "destination": "/index.html"
