@@ -1,125 +1,139 @@
-# 🎬 EditStream Pro
+# EditStream Pro
 
-**Fórum e Loja de Produtos Digitais** — Scripts, IPTV, Ferramentas e muito mais.
+> Fórum e plataforma de recursos digitais em desenvolvimento.
 
----
+**Repositório:** [danielmtx-dev/editstream-forum](https://github.com/danielmtx-dev/editstream-forum)  
+**Responsável:** [@Danielssh no Telegram](https://t.me/Danielssh)
 
-## 📋 Sobre o Projeto
+O EditStream Pro reúne a base de uma plataforma web com interface de fórum, contas de usuário e recursos administrativos. Este repositório está aberto para consulta do código e acompanhamento do desenvolvimento.
 
-EditStream Pro é uma plataforma completa de fórum e loja de produtos digitais com autenticação via Telegram Bot, pagamentos integrados com Mercado Pago e painel administrativo avançado.
+> **Estado do projeto:** em desenvolvimento. As integrações e os fluxos descritos neste documento dependem da configuração do ambiente e devem ser testados antes de uso em produção. Não use dados pessoais ou credenciais reais em demonstrações públicas.
 
----
+## Conteúdo
 
-## 🚀 Funcionalidades
+- [Funcionalidades planejadas e componentes](#funcionalidades-e-componentes)
+- [Tecnologias](#tecnologias)
+- [Estrutura do projeto](#estrutura-do-projeto)
+- [Requisitos](#requisitos)
+- [Executar localmente](#executar-localmente)
+- [Configuração](#configuração)
+- [Build e testes](#build-e-testes)
+- [Publicação](#publicação)
+- [Segurança](#segurança)
+- [Contribuir](#contribuir)
+- [Contato](#contato)
 
-### 🔐 Autenticação & Segurança
-- Cadastro com verificação via **Telegram Bot** (código de 6 dígitos no privado)
-- Login com usuário e senha (criptografia bcrypt + JWT)
-- Proteção contra brute force, rate limiting e sanitização XSS
-- Downloads protegidos com URLs temporárias
+## Funcionalidades e componentes
 
-### 💳 Pagamentos
-- Integração com **Mercado Pago** (PIX, Boleto, Cartão de Crédito/Débito)
-- Webhook de notificação automática de pagamento
-- Liberação manual de conteúdo pelo administrador
+O projeto contém código para desenvolver e integrar recursos como:
 
-### 🤖 Bot Telegram
-- Verificação de cadastro no grupo do Telegram
-- Botão "Confirmar Cadastro" exclusivo para o dono do @username
-- Envio de código de verificação no chat privado
-- Verificação automática de membro do grupo
+- Interface web de fórum e listagem de tópicos;
+- contas e gerenciamento de usuários;
+- área administrativa e permissões;
+- integrações externas, incluindo serviços de autenticação e pagamentos, conforme a configuração disponível no ambiente.
 
-### 📝 Fórum
-- Categorias agrupadas por seções
-- Threads com tags coloridas (Resource, Selling, etc.)
-- Comentários com **likes** e **dislikes**
-- Paginação e filtros
+A presença de um recurso na documentação ou no código não significa que ele esteja pronto ou configurado em produção. Confira o código e teste cada fluxo no seu ambiente antes de disponibilizá-lo ao público.
 
-### 👤 Painel do Usuário
-- Upload de foto de perfil
-- Alteração de senha
-- Histórico de pedidos e downloads
-- ID único por usuário
+## Tecnologias
 
-### ⚙️ Painel Administrativo
-- Gerenciamento completo de usuários (editar, banir, restringir, apagar)
-- Sistema de **cargos e permissões** personalizáveis
-- Gerenciamento de categorias e produtos
-- Upload de logos do site (Header, Banner, Favicon)
-- Configurações do Mercado Pago e contato Telegram
-- Liberação manual de conteúdos pagos para usuários
+Com base nas dependências e scripts do projeto:
 
----
+- **Frontend:** React, TypeScript e Vite;
+- **Servidor:** Node.js e Express;
+- **API:** tRPC;
+- **Banco de dados:** Drizzle ORM e driver MySQL;
+- **Estilização e componentes:** Tailwind CSS e Radix UI;
+- **Testes:** Vitest;
+- **Build:** Vite e esbuild.
 
-## 🛠️ Tecnologias
+## Estrutura do projeto
 
-| Tecnologia | Uso |
-|---|---|
-| **React** | Frontend SPA |
-| **Node.js + Express** | Backend API |
-| **SQLite** | Banco de dados |
-| **JWT + bcrypt** | Autenticação |
-| **Mercado Pago SDK** | Pagamentos |
-| **Telegram Bot API** | Verificação de usuários |
-| **Helmet + Rate Limiter** | Segurança |
+| Caminho | Finalidade |
+| --- | --- |
+| `client/` | Aplicação web |
+| `server/` | Servidor e lógica de API |
+| `shared/` | Código compartilhado |
+| `drizzle/` | Arquivos relacionados ao banco de dados |
+| `drizzle.config.ts` | Configuração do Drizzle |
+| `package.json` | Dependências e comandos do projeto |
+| `ENVIRONMENT_VARIABLES.md` | Referência de variáveis de ambiente |
+| `README-VERCEL.md` | Notas existentes sobre publicação na Vercel |
 
----
+## Requisitos
 
-## 📦 Instalação Local
+- Node.js compatível com as dependências do projeto;
+- pnpm (versão indicada no campo `packageManager` do `package.json`);
+- um banco MySQL compatível se a funcionalidade que você testar precisar dele;
+- variáveis de ambiente válidas para as integrações que forem usadas.
+
+## Executar localmente
+
+Clone o repositório e instale as dependências:
 
 ```bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/editstream-pro.git
-
-# Acesse a pasta
-cd editstream-pro
-
-# Instale as dependências
-npm install
-
-# Configure as variáveis de ambiente
-cp .env.example .env
-# Edite o arquivo .env com suas credenciais
-
-# Inicie o servidor
-npm run dev
+git clone https://github.com/danielmtx-dev/editstream-forum.git
+cd editstream-forum
+corepack enable
+pnpm install
 ```
 
+Crie um arquivo local de ambiente conforme as necessidades do código e consulte [ENVIRONMENT_VARIABLES.md](./ENVIRONMENT_VARIABLES.md). **Não copie chaves reais para arquivos versionados.** Se o projeto não tiver um modelo `.env.example`, configure apenas as variáveis que o código realmente exige.
+
+Inicie o ambiente de desenvolvimento:
+
+```bash
+pnpm dev
+```
+
+O terminal informará se o servidor iniciou e qual endereço local usar. Se ocorrer erro de configuração, banco ou variável ausente, resolva-o antes de testar as funcionalidades.
+
+## Configuração
+
+A lista de variáveis documentadas está em [ENVIRONMENT_VARIABLES.md](./ENVIRONMENT_VARIABLES.md). Ela inclui configurações para banco de dados, autenticação e integrações opcionais.
+
+- Use valores próprios para desenvolvimento.
+- Mantenha tokens, senhas, chaves privadas e strings de conexão fora do Git.
+- Não coloque segredos em variáveis com prefixo `VITE_`: valores com esse prefixo podem ser incluídos no código enviado ao navegador.
+- Nunca publique credenciais reais em capturas de tela, logs, issues ou demonstrações.
+
+## Build e testes
+
+Os comandos definidos atualmente em `package.json` incluem:
+
+```bash
+pnpm check
+pnpm test
+pnpm build
+```
+
+Execute-os no ambiente local e verifique os resultados. A documentação não representa uma garantia de que build, testes ou integrações estejam passando neste momento.
+
+## Publicação
+
+O projeto inclui [README-VERCEL.md](./README-VERCEL.md) com notas de publicação. Antes de disponibilizar uma demonstração pública:
+
+1. confirme que o build de produção termina sem erros;
+2. configure as variáveis no painel do provedor de hospedagem;
+3. configure um banco persistente e compatível, se necessário;
+4. teste autenticação, permissões e rotas da API;
+5. use credenciais de teste para pagamentos e integrações;
+6. verifique logs e erros após a publicação.
+
+A hospedagem estática do frontend, sozinha, não substitui o servidor de API nem o banco de dados. Não considere o deploy concluído até validar o sistema no endereço publicado.
+
+## Segurança
+
+Se encontrar uma possível vulnerabilidade, não publique tokens, dados privados nem detalhes exploráveis em uma issue pública. Consulte [SECURITY.md](./SECURITY.md) para orientações.
+
+## Contribuir
+
+Sugestões e correções são bem-vindas. Leia [CONTRIBUTING.md](./CONTRIBUTING.md) antes de abrir uma issue ou pull request.
+
+## Contato
+
+- Telegram: [@Danielssh](https://t.me/Danielssh)
+- Grupo: [@EditStreamPr](https://t.me/EditStreamPr)
+
 ---
 
-## 🌐 Deploy na Vercel
-
-1. Suba o projeto para um repositório no GitHub
-2. Acesse [vercel.com/new](https://vercel.com/new) e conecte o repositório
-3. Configure as variáveis de ambiente (veja `ENVIRONMENT_VARIABLES.md`)
-4. Clique em **Deploy**
-5. Após o deploy, configure o webhook do Telegram para a nova URL
-
----
-
-## ⚙️ Variáveis de Ambiente
-
-| Variável | Descrição |
-|---|---|
-| `DATABASE_URL` | URL de conexão com o banco de dados |
-| `JWT_SECRET` | Chave secreta para tokens JWT |
-| `MERCADOPAGO_ACCESS_TOKEN` | Access Token do Mercado Pago |
-| `MERCADOPAGO_PUBLIC_KEY` | Public Key do Mercado Pago |
-| `TELEGRAM_BOT_TOKEN` | Token do bot do Telegram |
-| `TELEGRAM_GROUP_ID` | ID do grupo do Telegram |
-| `SITE_URL` | URL do site em produção |
-
----
-
-## 📞 Contato
-
-- **Telegram:** [@Danielssh](https://t.me/Danielssh)
-- **Grupo:** [@editstreampro](https://t.me/editstreampro)
-
----
-
-## 📄 Licença
-
-Este projeto é proprietário. Todos os direitos reservados.
-
-© 2026 EditStream Pro - Desenvolvido por Daniel Ssh
+Feito por Daniel Ssh. Consulte os arquivos do repositório para verificar o estado atual do código e das integrações.
