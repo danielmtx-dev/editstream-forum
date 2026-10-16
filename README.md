@@ -2,7 +2,7 @@
 
 > Fórum e plataforma de recursos digitais do EditStream Pro.
 
-**🌐 Site:** [streamvip.shop](https://streamvip.shop)  
+**🌐 Site:** [streamvip.shop](https://editstream-forum-2rabq1287-danielxyzds-projects.vercel.app/)  
 **💻 Código-fonte:** [danielmtx-dev/editstream-forum](https://github.com/danielmtx-dev/editstream-forum)  
 **👤 Responsável:** [@Danielssh no Telegram](https://t.me/Danielssh)  
 **💬 Comunidade:** [@EditStreamPr no Telegram](https://t.me/EditStreamPr)
