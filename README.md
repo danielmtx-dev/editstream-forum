@@ -1,13 +1,21 @@
 # EditStream Pro
 
-> Fórum e plataforma de recursos digitais em desenvolvimento.
+> Fórum e plataforma de recursos digitais do EditStream Pro.
 
-**Repositório:** [danielmtx-dev/editstream-forum](https://github.com/danielmtx-dev/editstream-forum)  
-**Responsável:** [@Danielssh no Telegram](https://t.me/Danielssh)
+**🌐 Site:** [streamvip.shop](https://streamvip.shop)  
+**💻 Código-fonte:** [danielmtx-dev/editstream-forum](https://github.com/danielmtx-dev/editstream-forum)  
+**👤 Responsável:** [@Danielssh no Telegram](https://t.me/Danielssh)  
+**💬 Comunidade:** [@EditStreamPr no Telegram](https://t.me/EditStreamPr)
 
 O EditStream Pro reúne a base de uma plataforma web com interface de fórum, contas de usuário e recursos administrativos. Este repositório está aberto para consulta do código e acompanhamento do desenvolvimento.
 
-> **Estado do projeto:** em desenvolvimento. As integrações e os fluxos descritos neste documento dependem da configuração do ambiente e devem ser testados antes de uso em produção. Não use dados pessoais ou credenciais reais em demonstrações públicas.
+> **Estado do projeto:** em desenvolvimento. O site está publicado na Vercel; as funções de backend, autenticação, banco de dados e pagamentos precisam ser validadas separadamente antes do uso em produção. Não use dados pessoais ou credenciais reais em demonstrações públicas.
+
+## Sobre o projeto
+
+O EditStream Pro é uma plataforma web em desenvolvimento para reunir recursos digitais, comunidade e funcionalidades de fórum em uma experiência única. Acesse o site para conhecer a interface e acompanhe este repositório para ver o código e a evolução do projeto.
+
+**Tópicos sugeridos para o GitHub:** `forum`, `react`, `typescript`, `vite`, `nodejs`, `express`, `trpc`, `drizzle-orm`, `digital-platform`, `editstream-pro`.
 
 ## Conteúdo
 
