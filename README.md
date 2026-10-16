@@ -77,7 +77,13 @@ corepack enable
 pnpm install
 ```
 
-Crie um arquivo local de ambiente conforme as necessidades do código e consulte [ENVIRONMENT_VARIABLES.md](./ENVIRONMENT_VARIABLES.md). **Não copie chaves reais para arquivos versionados.** Se o projeto não tiver um modelo `.env.example`, configure apenas as variáveis que o código realmente exige.
+Crie seu arquivo local a partir do modelo e confira a documentação das variáveis:
+
+```bash
+cp .env.example .env
+```
+
+Edite `.env` e preencha apenas os valores necessários ao ambiente. Consulte [ENVIRONMENT_VARIABLES.md](./ENVIRONMENT_VARIABLES.md) e confirme no código quais variáveis são realmente usadas. **Não coloque credenciais reais em arquivos versionados.**
 
 Inicie o ambiente de desenvolvimento:
 
